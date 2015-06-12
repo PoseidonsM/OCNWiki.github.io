@@ -1,0 +1,161 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Setting up Servers - Guides - OCNWiki</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/index">Unofficial Overcast Network Wiki</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/index"><i class="fa fa-home"></i> Home</a></li>
+            <li><a href="/en/wiki/main"><i class="fa fa-book"></i> Wiki</a></li>
+            <li class="active"><a href="/en/guides/main"><i class="fa fa-file"></i> Guides</a></li>
+            <li><a href="/en/community/main"><i class="fa fa-users"></i> Community</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+    <!-- Content Start -->
+    <div class="container">
+      <div class="jumbotron" style="background-color:#450f43">
+        <h1 style="color:#FFFFFF">Setting up Servers Guide</h1>
+      </div>
+      <section>
+        <div class="row">
+          <div class="col-md-3">
+            <ul class="nav nav-pills nav-stacked">
+              <li>
+                <a href="/en/guides/mumble">Mumble Guide</a>
+              </li>
+              <li class="active">
+                <a href="/en/guides/obs">OBS Guide</a>
+              </li>
+              <li>
+              	<a href="/en/guides/servers">Servers Guide</a>
+			  </li>
+            </ul>
+          </div>
+                   <div class="col-md-9">
+            <div class="page-header">
+              <h2 id="types">Types of Servers</h2>
+            </div>
+            <p>To set up a server, all you're really going to need a few key components: A server, plugins and some friends.</p>
+            <p>In order to get started, you need to decide which type of server you require. For OCN, there are two types you might want to download. You can choose to either create a map developing server or a scrimmage server. Map developing servers are used to create maps that you will hope to be loaded onto public rotations, for the Overcast Netowork. Comparatively, scrimmage servers are for practicing team strategies and perhaps your own strategies with friends, or for hosting scrimmages.</p>
+            <p>To set up a server, you're going to need a few key components: A server, plugins and some friends.</p>
+            <div class="page-header">
+              <h2 id="developing">Map Developing Servers</h2>
+            </div>
+            <div class="page-header">
+              <h3 id="developing_download">Downloading (Server Jar and Plugins)</h3>
+            </div>
+            <p>To start, you're going to need to decide upon a server jar. As Minecraft's downloadable server services do not allow plugins, you will have to download a different type. Bukkit is currently disfunyct so we cannot use that either. That leaves us with Spigot and alternate bukkit clones. Spigot is the general replacement for Bukkit and what is reccommended for map developing. It's downloading guide is <a href="http://www.spigotmc.org/wiki/spigot-installation/">here</a>. However if you prefer, you can download an alternate Bukkit clone. For the ease of further steps, your downloaded jar file should be renamed to <code>server.jar</code>.</p>
+            <p>Also, plugins need to be downloaded. For map making there is some reccommended plugins that are commonly used, along with some good ones that are generally not used. These plugins will be listed below along with a short description and download link.</p>
+            <ul>
+              <li>Essentials. An extension on basic commands. This plugin supplies a huge arsenal of commands ranging from <code>/gm</code> to <code>/kittycannon</code> which admitedly, aren't <b>all</b> useful, but the good heavily outweighs the bad. This is a must get for any server. Just a heads up, the plugin jars are included in the jar you download.<a href="http://www.curse.com/bukkit-plugins/minecraft/essentials">Download Essentials here.</a></li>
+              <li>World Edit. Everyone's heard of this plugin, and for a good reason. It easily allows you to flip, rotate and manipulate maps with simple commands. Highly reccommended for mapmaking servers. World Edit does have some problems currently, so if you download I reccommend looking for a fix for it as well, there's a few out there but they're hard to find, or just don't use those commands. Use <code>/flip</code> instead of <code>/rotate</code>. <a href="http://www.curse.com/bukkit-plugins/minecraft/worldedit">Download World Edit here.</a></li>
+                            <li>World Edit Visualiser. A great add-on for World Edit. It shows your selections with an outline of redstone particles so you know what you're selecting. Very under-appreciated. <a href="http://www.curse.com/bukkit-plugins/minecraft/worldedit-selection-visualiser">Download World Edit here.</a></li>
+              <li>Multiverse. A must have. Easily create worlds with special properties, and easily manipulate world properties <a href="http://www.curse.com/bukkit-plugins/minecraft/multiverse-core">Download Multiverse here.</a></li>
+              <li>Voxel Sniper. This is another pretty common one, but not many people know how to use it. It's basically a long range editting tool, with command that do similar things to World Edit. If you're going to use it, research it a bit and read the Curse description before deciding to download. <a href="http://www.curse.com/bukkit-plugins/minecraft/voxelsniper">Download Voxel Sniper here.</a></li>
+              <li>World Guard. Now this plugin doesn't really have the best rap, but it's very useful for map making.  You can change effects, block updating and much more. This includes vine/crop growth, fire spread and stopping water from flowing. Most used command is usually <code>/stoplag</code> which stops all block updates server-wide and removes all entities. <a href="http://www.curse.com/bukkit-plugins/minecraft/worldguard">Download World Guard here.</a></li>
+              <li>Maps. You're also going to want to download maps. Maps have to be made with correct XML and files. There is a guide for this <a href="https://docs.oc.tc">here.</a> Alternatively, you can download maps from the Overcast Network repository which can be found<a href="https://maps.oc.tc"> here.</a></li>
+			</ul>
+  			<div class="page-header">
+              <h3 id="developing_starting">Starting your server.</h3>
+            </div>
+            <p>To start your server you're going to need to create a text file, to allocate RAM and to create a start script. This text file will change depending on what you're operating system is. Here is a windows one and an apple one, sorry Linux users, time to go research it. <b>It's important that you've renamed your server jar to <code>server.jar</code></b>.</p>
+            <p>Windows Users:<br><code>@echo off<br>java -Xmx(NUMBER OF MEGABYTES YOU WANT TO ALLOCATE)M -XX:MaxPermSize=128M -jar server.jar<br>pause</code><br>Then name this text file <code>run.bat</code> and save it in the same place as your server jar. It's probably smart to put them both in a new folder.</p>
+            <p>Mac Users:<br><code>#!/bin/bash<br>cd "$(dirname "$0")"<br>exec java -Xmx(NUMBER OF MEGABYTES YOU WANT TO ALLOCATE)M -jar server.jar nogui</code><br>Then name the text file <code>run.command</code> and save it in the same place as your server jar. It's probably smart to put them both in a new folder.</p>
+            <p>Now, run your text file (which will now be either a batch file or a command script).</p>
+			<div class="page-header">
+              <h3 id="developing_setting">Setting the server up.</h3>
+            </div>
+            <p>If you haven't already, and if it's done loading, feel free to close your server that <b>should</b> have opened. If you look back in your folder with the jar file in it, you'll now have a whole server directory. Your plugins folder should be there, so take a second and put all of your downloaded plugin jars from before into the folder. Now run it again and your server will be fully functional!</p>
+            <div class="page-header">
+              <h2 id="scrimmage">Scrimmage Servers</h2>
+            </div>
+            <div class="page-header">
+              <h3 id="scrimmage_download">Downloading (Server Jar and Plugins)</h3>
+            </div>
+            <p>To start, you're going to need to decide upon a server jar. As Minecraft's downloadable server services do not allow plugins, you will have to download a different type. Bukkit is currently disfunyct so we cannot use that either. That leaves us with Sportbukkit and alternate bukkit clones. Sportbukkit is a server jar that's optimised for pvp, it's developed by the Overcast development team. It's download links are <a href="https://build.oc.tc/job/SportBukkit">here</a>. However if you prefer, you can download an alternate Bukkit clone. For the ease of further steps, your downloaded jar file should be renamed to <code>server.jar</code>. </p>
+            <p>Also, plugins need to be downloaded. For scrimmages there are some reccommended plugins that are commonly used. These plugins will be listed below along with a short description and download link.</p>
+            <ul>
+              <li>Cardinal PGM. This is 100% neccessery, it's the PGM clone, without this you will have no scrimmages. This plugin supplies support for most xml units, but not all.  <a href="ci.twizmwaz.in/job/Cardinal">Download Cardinal  here.</a></li>
+              <li>World Edit. Everyone's heard of this plugin, and for a good reason. It easily allows you to flip, rotate and manipulate maps with simple commands. Highly reccommended for all servers. World Edit does have some problems currently, so if you download I reccommend looking for a fix for it as well, there's a few out there but they're hard to find, or just don't use those commands. You can use this if you want to make minor changes to maps for gameplay. <a href="http://www.curse.com/bukkit-plugins/minecraft/worldedit">Download World Edit here.</a></li>
+            </ul>
+            <div class="page-header">
+              <h3 id="scrimmage_starting">Starting your server.</h3>
+            </div>
+            <p>To start your server you're going to need to create a text file, to allocate RAM and to create a start script. This text file will change depending on what you're operating system is. Here is a windows one and an apple one, sorry Linux users, time to go research it. <b>It's important that you've renamed your server jar to <code>server.jar</code></b>.</p>
+            <p>Windows Users:<br>
+              <code>@echo off<br>
+                java -Xmx(NUMBER OF MEGABYTES YOU WANT TO ALLOCATE)M -XX:MaxPermSize=128M -jar server.jar<br>
+                pause</code><br>
+              Then name this text file <code>run.bat</code> and save it in the same place as your server jar. It's probably smart to put them both in a new folder.</p>
+            <p>Mac Users:<br>
+              <code>#!/bin/bash<br>
+                cd "$(dirname "$0")"<br>
+                exec java -Xmx(NUMBER OF MEGABYTES YOU WANT TO ALLOCATE)M -jar server.jar nogui</code><br>
+              Then name the text file <code>run.command</code> and save it in the same place as your server jar. It's probably smart to put them both in a new folder.</p>
+            <p>Now, run your text file (which will now be either a batch file or a command script).</p>
+            <div class="page-header">
+              <h3 id="scrimmage_setting">Setting the server up.</h3>
+            </div>
+            <p>If you haven't already, and if it's done loading, feel free to close your server that <b>should</b> have opened. If you look back in your folder with the jar file in it, you'll now have a whole server directory. Your maps folder should be there also, so take a second and put all of your downloaded maps) from before into the folder. Now run it again and your scrimmage server will be fully functional!</p>
+			<div class="page-header">
+              <h2 id="hosting">Hosting</h2>
+            </div>
+            <p>The last thing you need to consider is how you're going to host your server. <br>You can either host it on your own computer, and only put it up when <b>you</b> need it, or you can pay for hosting. Beastnode have good deals ranging through everything you could need.You can find there deals <a href="https://oc.tc/host">here</a>.</p>
+            <p>If you want to host on your own computer, you need to do a few things including port forwarding, and getting a static IP adress. The port forwarding is mandatory however the static IP is not, but your IP will change frequently. To port forward, a guide can be found <a href="http://portforward.com/">here</a>. That website also has a static IP walkthrough. It is very helpful if you're going to try to port forward yourself.</p>
+            <br>
+            <p>Guide by Poseidons</p>
+          </div>
+        <br>
+      </section>
+    </div>
+    <!-- Content End -->
+    <div class="container">
+      <hr>
+      <footer>
+        <ul class="nav nav-pills">
+          <div class="btn-group">
+            <div class="dropup">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Language Selection <i class="fa fa-caret-up"></i></button>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">English</a></li>
+              </ul>
+            </div>
+          </div>
+          <li class="pull-right"><a href="/en/contributing"><i class="fa fa-gear"></i> Contributing</a></li>
+        </ul>
+      </footer>
+    <br>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  </body>
+</html>
